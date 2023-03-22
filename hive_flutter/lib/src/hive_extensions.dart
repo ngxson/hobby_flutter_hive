@@ -16,8 +16,7 @@ extension HiveX on HiveInterface {
     //  var appDir = await getApplicationDocumentsDirectory();
     //  path = path_helper.join(appDir.path, subDir);
     //}
-    var appDir = Directory("/tmp");
-    path = path_helper.join(appDir.path, subDir);
+    path = path_helper.join("/tmp", subDir);
 
     init(
       path,

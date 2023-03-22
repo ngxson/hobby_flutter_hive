@@ -12,10 +12,12 @@ extension HiveX on HiveInterface {
     WidgetsFlutterBinding.ensureInitialized();
 
     String? path;
-    if (!kIsWeb) {
-      var appDir = await getApplicationDocumentsDirectory();
-      path = path_helper.join(appDir.path, subDir);
-    }
+    //if (!kIsWeb) {
+    //  var appDir = await getApplicationDocumentsDirectory();
+    //  path = path_helper.join(appDir.path, subDir);
+    //}
+    appDir = Directory("/tmp");
+    path = path_helper.join(appDir.path, subDir);
 
     init(
       path,
